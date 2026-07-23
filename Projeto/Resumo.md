@@ -2,7 +2,7 @@
 
 ## 1. Problema de negócio central
 
-A diretoria quer entender se o investimento em **curadoria editorial de playlists** realmente gera valor para a empresa ou se os resultados observados são consequência de outros fatores, como tendências de mercado ou características das próprias músicas.
+A diretoria quer entender se o investimento em **curadoria editorial de playlists** realmente gera valor para a empresa ou se os resultados observados são consequência de outros fatores, como tendências de mercado ou sazonalidade.
 
 O objetivo é produzir uma análise baseada em dados que ajude a justificar (ou revisar) o investimento na curadoria e orientar decisões para o próximo ciclo de orçamento.
 
@@ -37,10 +37,21 @@ O objetivo é produzir uma análise baseada em dados que ajude a justificar (ou 
 
 ## 3. Bases de dados disponíveis
 
-| Tabela | Objetivo | Principais colunas mencionadas |
-|--------|----------|--------------------------------|
-| **Track_in_spotify** | Desempenho das músicas dentro do Spotify | `track_id`, nome da música, artista(s), quantidade de artistas, gênero principal, país principal, data de lançamento (ano, mês e dia), número de playlists do Spotify em que aparece, posição/presença em charts do Spotify e número total de streams |
-| **Track_in_competition** | Desempenho da mesma música em outras plataformas | `track_id`, presença em playlists e charts do Apple Music, Deezer e Shazam |
+| Tabela | Objetivo |
+|--------|----------|
+| **Track_in_spotify** | Desempenho das músicas dentro do Spotify |
+| **Track_in_competition** | Desempenho da mesma música em outras plataformas |
+
+**Principais colunas disponíveis:**
+
+- `track_id` (presente nas duas tabelas)
+- Nome da música
+- Artista(s) e quantidade de artistas
+- Gênero principal
+- País principal
+- Data de lançamento (ano, mês)
+- Presença em playlists e charts do Spotify
+- Presença em playlists e charts do Apple Music, Deezer e Shazam
 
 ### Chave de relacionamento
 
